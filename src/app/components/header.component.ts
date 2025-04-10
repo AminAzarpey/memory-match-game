@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , inject  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '@memoryMatchGame/services';
 import { ThemeService } from '@memoryMatchGame/services';
@@ -152,13 +152,12 @@ import { generateColorPalette } from '@memoryMatchGame/utils';
   styles: [],
 })
 export class HeaderComponent {
+  public translation = inject(TranslationService);
+  public themeService = inject(ThemeService);
   isMenuOpen = false;
   colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
 
-  constructor(
-    public translation: TranslationService,
-    public themeService: ThemeService
-  ) {}
+
 
   handleColorChange(color: string) {
     const theme = generateColorPalette(color);
