@@ -1,14 +1,10 @@
-<div class="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
-<button (click)="toggleDarkMode()">
-  {{ themeService.isDarkMode ? 'Light Mode' : 'Dark Mode' }}
-</button>
-  <main
-    class="container mx-auto px-4 py-8"
-
-  >
+<div
+  class="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white"
+>
+  <app-header></app-header>
+  <main class="container mx-auto px-4 py-8">
     <div class="max-w-7xl mx-auto">
-      <ng-content></ng-content>
+      <router-outlet/>
     </div>
   </main>
-
 </div>
