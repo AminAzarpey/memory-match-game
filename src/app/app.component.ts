@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ThemeService } from './services/theme.service';
 import { TranslationService } from '@memoryMatchGame/services';
 import { HeaderComponent } from './components/header.component';
-import { RouterModule } from '@angular/router';
+import { MemoryGameComponent } from './components/memory-game.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, RouterModule],
+  imports: [HeaderComponent, MemoryGameComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
