@@ -12,7 +12,6 @@ import { generateColorPalette } from '@memoryMatchGame/utils';
     <header
       class="w-full p-4 flex justify-between items-center shadow-md"
       [style.backgroundColor]="'rgba(var(--color-primary-rgb), 0.1)'"
-      [dir]="translation.currentLanguage === 'fa' ? 'rtl' : 'ltr'"
     >
       <div class="flex items-center space-x-4">
         <h1 class="text-2xl font-bold text-gray-800 dark:text-white">
@@ -96,10 +95,26 @@ import { generateColorPalette } from '@memoryMatchGame/utils';
 
       <div
         *ngIf="isMenuOpen"
-        class="absolute top-16 right-4 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 z-50"
-        [dir]="translation.currentLanguage === 'fa' ? 'rtl' : 'ltr'"
+        class="absolute top-16 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 z-50"
+        [class.right-4]="translation.currentLanguage === 'en'"
+        [class.left-4]="translation.currentLanguage === 'fa'"
       >
         <div class="space-y-4">
+        <svg
+            (click)="isMenuOpen = !isMenuOpen"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
           <!-- Color Palette -->
           <div class="space-y-2">
             <span class="text-gray-600 dark:text-gray-300">
