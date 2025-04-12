@@ -21,7 +21,7 @@ interface Card {
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="container px-4 py-8 mx-auto  flex flex-col items-center justify-center">
       <div class="mb-8 flex items-center gap-4">
         <div class="text-2xl font-bold">
           {{ translation.t('time') }}: {{ formatTime(time) }}
@@ -69,16 +69,16 @@ interface Card {
       <!-- Win/Lose Modal -->
       <div
         *ngIf="showModal"
-        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm bg-opacity-50 flex items-center justify-center z-50"
         [@modalAnimation]
       >
         <div
-          class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-xl text-center"
+          class="bg-gray-50 dark:bg-gray-900 p-8 max-w-md w-full mx-4 flex items-center flex-col justify-center gap-4  rounded-2xl shadow-2xl border border-primary/10 dark:border-neutral/10"
         >
-          <h2 class="text-3xl font-bold mb-4">
+          <h2 class="text-3xl font-bold">
             {{ isWinner ? translation.t('youWon') : translation.t('youLost') }}
           </h2>
-          <p class="text-xl mb-4">
+          <p class="text-xl ">
             {{ translation.t('finalScore') }}: {{ formatTime(time) }}
           </p>
           <button
