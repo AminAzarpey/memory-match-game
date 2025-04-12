@@ -1,59 +1,56 @@
-# MemoryMatchGame
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+# Memory Match Game
 
-## Development server
+A fun and interactive **Memory Match Game** built with **Angular** and styled using **Tailwind CSS**. The game features dynamic theming and color palette switching powered by Angular services. Cards flip with smooth animations, making the game visually engaging. Whether you're playing on mobile or desktop, the responsive design ensures a great experience.
 
-To start a local development server, run:
+## Key Features
+- **Dynamic Theme**: Switch between light and dark modes with a simple button click. Themes and color schemes are managed dynamically using Angular's theme and palette services.
+- **Smooth Card Animations**: Cards flip with elegant animations, enhancing the gameplay experience.
+- **Responsive Design**: Built using **Tailwind CSS**, ensuring the game looks great on all devices—mobile, tablet, or desktop.
+- **Customizable**: Easily add new themes, colors, and animations using the provided theme and palette services.
 
-```bash
-ng serve
-```
+## Technologies Used
+- **Angular**: A powerful front-end framework for building dynamic and responsive web applications.
+- **Tailwind CSS**: A utility-first CSS framework that enables rapid customization of designs.
+- **Angular Animations**: Used to create smooth, interactive animations for the cards.
+- **Theme and Palette Services**: Services that allow for easy dynamic switching of themes and color palettes (light/dark).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Getting Started
 
-## Code scaffolding
+Follow these simple steps to set up and run the Memory Match Game on your local machine.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 1. Clone the repository:
+   ```bash
+   git clone https://github.com/AminAzarpey/memory-match-game.git
+   ```
 
-```bash
-ng generate component component-name
-```
+### 2. Navigate into the project folder:
+   ```bash
+   cd memory-match-game
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-ng generate --help
-```
+### 4. Run the application:
+   ```bash
+   ng serve
+   ```
 
-## Building
+   Now, open your browser and navigate to `http://localhost:4200` to start playing the game.
 
-To build the project run:
+## How to Play
 
-```bash
-ng build
-```
+- Click on the cards to reveal their images.
+- Try to match pairs of cards by remembering where they are located.
+- The game tracks the number of moves and time taken to match all pairs.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Contributing
 
-## Running unit tests
+Feel free to fork this repository, make improvements, and submit pull requests. If you are contributing to the code, please ensure your changes are well-documented and maintain the code style of the project.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## License
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
